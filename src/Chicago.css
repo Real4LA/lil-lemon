@@ -1,0 +1,92 @@
+#chicagoSec {
+  background-color: rgba(73, 94, 87, 255);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100vw;
+}
+#chicago {
+  width: 250px;
+  height: 300px;
+  border-radius: 5px;
+}
+div {
+  width: 40vw;
+}
+h1 {
+  color: white;
+  font-size: 3rem;
+  padding: 0;
+  margin-bottom: 0;
+}
+h3 {
+  font-size: 1.5rem;
+  margin-top: 0;
+}
+button {
+  margin-top: 1rem;
+  background-color: #ffffff; /* Warm orange */
+  color: rgba(73, 94, 87, 255); /* White text */
+  border: none; /* Removes default borders */
+  border-radius: 8px; /* Rounded corners */
+  padding: 12px 20px; /* Space inside the button */
+  font-size: 16px; /* Adjust font size */
+  font-weight: bold; /* Bold text */
+  cursor: pointer; /* Pointer cursor on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+button:hover {
+  background-color: rgba(156, 192, 181, 0.829);
+  color: white; /* Slightly darker orange */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+  transform: translateY(-2px); /* Slight hover lift */
+}
+
+button:active {
+  background-color: #d35400; /* Even darker for click */
+  transform: translateY(0); /* Resets lift */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+@media (max-width: 480px) {
+  #chicagoSec {
+    flex-direction: column;
+  }
+  #chicago {
+    width: 150px;
+    height: auto;
+  }
+  h1 {
+    color: white;
+    font-size: 2rem;
+    padding: 0;
+    margin-bottom: 0;
+  }
+  h3 {
+    font-size: 1.5rem;
+    margin-top: 0;
+  }
+  p {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 780px) {
+  #chicago {
+    width: 150px;
+    height: auto;
+  }
+  h1 {
+    color: white;
+    font-size: 2rem;
+    padding: 0;
+    margin-bottom: 0;
+  }
+  h3 {
+    font-size: 1.5rem;
+    margin-top: 0;
+  }
+  p {
+    font-size: 1rem;
+  }
+}

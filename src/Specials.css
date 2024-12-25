@@ -1,0 +1,87 @@
+#specials {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100vw;
+}
+card {
+  width: 25vw;
+  background-color: rgba(73, 94, 87, 255);
+  border-radius: 15px;
+  margin: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+card img {
+  width: 100%;
+  height: 60%;
+  position: relative;
+  border-radius: 15px 15px 0 0;
+  top: -20px;
+  margin-bottom: 0;
+}
+card h2 {
+  color: white;
+  margin: 0 0 0 0;
+}
+card span {
+  color: orange;
+}
+card p {
+  padding-left: 10px;
+}
+.icon {
+  height: 25px;
+  width: 25px;
+}
+card h3 {
+  font-size: 1rem;
+}
+card div {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.541);
+  transition: ease-out 0.3s;
+}
+@media (max-width: 900px) {
+  #specials {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  card {
+    width: 80vw;
+  }
+  card img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    left: 0px;
+  }
+}
+
+@media (max-width: 480px) {
+  #specials {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  card {
+    width: 200px;
+  }
+  card img {
+    width: 200px;
+    height: auto;
+    position: relative;
+    left: 0px;
+  }
+}

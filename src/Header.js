@@ -1,22 +1,30 @@
 import React from "react";
+import exampleImage from "./assets/logo.jpg";
+import "./Header.css";
 
 const Header = () => {
   return (
     <header>
-      <img
-        src="https://www.littlelemonproject.com/static/media/Little%20Lemon%20Logo%20colors.2c859235d6c57bb54176.png"
-        alt="Little Lemon Logo"
-      />
+      <img src={exampleImage} alt="Little Lemon Logo" />
       <nav>
         <ul>
+          <li>
+            <a>Home</a>
+          </li>
+          <li>
+            <a>About</a>
+          </li>
+          <li>
+            <a>Menu</a>
+          </li>
           <li>
             <a>Reservation</a>
           </li>
           <li>
-            <a>About Us</a>
+            <a>Order Online</a>
           </li>
           <li>
-            <a>Contact</a>
+            <a>Login</a>
           </li>
         </ul>
       </nav>
