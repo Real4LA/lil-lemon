@@ -1,8 +1,9 @@
 import React from "react";
 import exampleImage from "./assets/logo.jpg";
+import { Link } from "react-router-dom";
 import "./Header.css";
 
-const Header = () => {
+const Header = ({ onShowReservation }) => {
   return (
     <header>
       <img src={exampleImage} alt="Little Lemon Logo" />
@@ -18,7 +19,7 @@ const Header = () => {
             <a>Menu</a>
           </li>
           <li>
-            <a>Reservation</a>
+            <Link onClick={onShowReservation}>Reservation</Link>
           </li>
           <li>
             <a>Order Online</a>

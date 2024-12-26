@@ -21,9 +21,6 @@ const Footer = () => {
               <a>Menu</a>
             </li>
             <li>
-              <a>Reservations</a>
-            </li>
-            <li>
               <a>Order Online</a>
             </li>
             <li>

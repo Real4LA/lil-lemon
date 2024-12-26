@@ -1,7 +1,7 @@
 import React from "react";
 import "./Chicago.css";
 import exampleImage from "./assets/chicago.jpg";
-const Chicago = () => {
+const Chicago = ({ onShowReservation }) => {
   return (
     <section id="chicagoSec">
       <div>
@@ -13,7 +13,7 @@ const Chicago = () => {
           dolor sit amet, consectetur adipiscing elit, sed do eiusmodtempor
           incididunt ut labore et dolore magna aliqua.
         </p>
-        <button>Reserve A Table</button>
+        <button onClick={onShowReservation}>Reserve A Table</button>
       </div>
       <img id="chicago" src={exampleImage} alt="Little Lemon Chicago" />
     </section>
