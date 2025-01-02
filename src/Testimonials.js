@@ -15,7 +15,7 @@ const Testimonials = () => {
           </h2>
           <div>
             <img class="test" src={t1} alt="person1" />
-            <h3>Mohsen</h3>
+            <h3>Jhon</h3>
           </div>
           <p>
             The famous greek salad of crispy lettuce, peppers, olives and our
@@ -25,11 +25,11 @@ const Testimonials = () => {
         </card>
         <card class="testis">
           <h2>
-            Rating: <span>4.6</span>
+            Rating: <span>4.9</span>
           </h2>
           <div>
             <img class="test" src={t2} alt="person2" />
-            <h3>Mohsen</h3>
+            <h3>Luke</h3>
           </div>
           <p>
             The famous greek salad of crispy lettuce, peppers, olives and our
@@ -39,11 +39,11 @@ const Testimonials = () => {
         </card>
         <card class="testis">
           <h2>
-            Rating: <span>4.6</span>
+            Rating: <span>5.0</span>
           </h2>
           <div>
             <img class="test" src={t3} alt="person3" />
-            <h3>Mohsen</h3>
+            <h3>David</h3>
           </div>
           <p>
             The famous greek salad of crispy lettuce, peppers, olives and our
@@ -53,11 +53,11 @@ const Testimonials = () => {
         </card>
         <card class="testis">
           <h2>
-            Rating: <span>4.6</span>
+            Rating: <span>4.7</span>
           </h2>
           <div>
             <img class="test" src={t4} alt="person4" />
-            <h3>Mohsen</h3>
+            <h3>Alexa</h3>
           </div>
           <p>
             The famous greek salad of crispy lettuce, peppers, olives and our

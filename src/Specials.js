@@ -25,7 +25,7 @@ const Specials = () => {
       <card>
         <img class="sp" src={sp2} alt="SpecialDish1" />
         <h2>
-          Greek salas <span>12.99$</span>
+          Bruchetta <span>5.99$</span>
         </h2>
         <p>
           The famous greek salad of crispy lettuce, peppers, olives and our
@@ -40,7 +40,7 @@ const Specials = () => {
       <card>
         <img class="sp" src={sp3} alt="SpecialDish1" />
         <h2>
-          Greek salas <span>12.99$</span>
+          Lemon Dessert <span>5.00$</span>
         </h2>
         <p>
           The famous greek salad of crispy lettuce, peppers, olives and our

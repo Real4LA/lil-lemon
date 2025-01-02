@@ -30,6 +30,7 @@ img {
   margin: 20px;
   width: 202px;
   height: 76px;
+  border-radius: 5px;
 }
 a:hover {
   color: rgba(73, 94, 87, 255);
