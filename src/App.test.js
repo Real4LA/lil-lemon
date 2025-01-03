@@ -59,35 +59,27 @@ test("renders learn react link", () => {
 });
 import { initializeTimes, updateTimes } from "./App";
 
+// Mock the fetchAPI function
+global.fetchAPI = jest.fn();
+
 describe("initializeTimes", () => {
-  it("should return the correct initial times", () => {
-    const expectedTimes = [
-      "18:00",
-      "18:30",
-      "19:00",
-      "19:30",
-      "20:00",
-      "20:30",
-      "21:00",
-    ];
+  it("should return available booking times", () => {
+    // Mock the fetchAPI function to return a non-empty array
+    fetchAPI.mockReturnValue(["18:00", "18:30", "19:00"]);
+
     const times = initializeTimes();
-    expect(times).toEqual(expectedTimes);
+    expect(times).toEqual(["18:00", "18:30", "19:00"]);
   });
 });
 
 describe("updateTimes", () => {
-  it("should return the same state that is provided", () => {
-    const initialState = [
-      "18:00",
-      "18:30",
-      "19:00",
-      "19:30",
-      "20:00",
-      "20:30",
-      "21:00",
-    ];
+  it("should return available booking times for the selected date", () => {
+    // Mock the fetchAPI function to return a non-empty array
+    fetchAPI.mockReturnValue(["18:00", "18:30", "19:00"]);
+
+    const state = [];
     const action = { type: "update", date: "2023-10-10" };
-    const newState = updateTimes(initialState, action);
-    expect(newState).toEqual(initialState);
+    const times = updateTimes(state, action);
+    expect(times).toEqual(["18:00", "18:30", "19:00"]);
   });
 });
