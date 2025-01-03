@@ -19,7 +19,9 @@ const Header = ({ onShowReservation }) => {
             <a>Menu</a>
           </li>
           <li>
-            <Link onClick={onShowReservation}>Reservation</Link>
+            <Link id="link" onClick={onShowReservation}>
+              Reservation
+            </Link>
           </li>
           <li>
             <a>Order Online</a>

@@ -2,6 +2,7 @@ ul {
   list-style: none;
   display: flex;
   flex-direction: row;
+  color: rgb(43, 56, 51);
   gap: 2rem;
   margin: 20px;
 }
@@ -33,6 +34,15 @@ img {
   border-radius: 5px;
 }
 a:hover {
+  color: rgba(73, 94, 87, 255);
+  transition: ease-in 0.3s;
+  text-decoration: underline;
+}
+#link {
+  color: rgb(43, 56, 51);
+  text-decoration: none;
+}
+#link:hover {
   color: rgba(73, 94, 87, 255);
   transition: ease-in 0.3s;
   text-decoration: underline;
