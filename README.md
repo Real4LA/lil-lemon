@@ -24,10 +24,12 @@ Welcome to the **Little Lemon** website repository! This project features a mode
 ---
 
 ## 💻 Technologies Used
-
-- **Frontend**:
   - HTML5, CSS3, JavaScript
   - Framework: React
+  - Jest
+  - React Testing Library
+  - Git and Github
+  - Figma
 
 # Getting Started with Create React App
 
