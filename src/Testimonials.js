@@ -9,12 +9,12 @@ const Testimonials = () => {
     <div id="testiAll">
       <h1>Testimonials</h1>
       <section id="testimonials">
-        <card class="testis">
+        <card className="testis">
           <h2>
             Rating: <span>4.6</span>
           </h2>
           <div>
-            <img class="test" src={t1} alt="person1" />
+            <img className="test" src={t1} alt="person1" />
             <h3>Jhon</h3>
           </div>
           <p>
@@ -23,12 +23,12 @@ const Testimonials = () => {
             rosemary croutons.
           </p>
         </card>
-        <card class="testis">
+        <card className="testis">
           <h2>
             Rating: <span>4.9</span>
           </h2>
           <div>
-            <img class="test" src={t2} alt="person2" />
+            <img className="test" src={t2} alt="person2" />
             <h3>Luke</h3>
           </div>
           <p>
@@ -37,12 +37,12 @@ const Testimonials = () => {
             rosemary croutons.
           </p>
         </card>
-        <card class="testis">
+        <card className="testis">
           <h2>
             Rating: <span>5.0</span>
           </h2>
           <div>
-            <img class="test" src={t3} alt="person3" />
+            <img className="test" src={t3} alt="person3" />
             <h3>David</h3>
           </div>
           <p>
@@ -51,12 +51,12 @@ const Testimonials = () => {
             rosemary croutons.
           </p>
         </card>
-        <card class="testis">
+        <card className="testis">
           <h2>
             Rating: <span>4.7</span>
           </h2>
           <div>
-            <img class="test" src={t4} alt="person4" />
+            <img className="test" src={t4} alt="person4" />
             <h3>Alexa</h3>
           </div>
           <p>

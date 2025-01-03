@@ -1,82 +1,93 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Reservation.css";
 
-const Reservation = () => {
+const Reservation = ({
+  availableTimes,
+  onHideReservation,
+  dispatch,
+  submitForm,
+}) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [date, setDate] = useState("");
   const [occaison, setOccaison] = useState("");
   const [time, setTime] = useState("");
   const [guests, setGuests] = useState(1);
-  const [availableTimes, setAvailableTimes] = useState([
-    "18:00",
-    "18:30",
-    "19:00",
-    "19:30",
-    "20:00",
-    "20:30",
-    "21:00",
-  ]);
+
+  useEffect(() => {
+    console.log("Available times updated:", availableTimes);
+  }, [availableTimes]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log({ name, email, date, occaison, time, guests });
-    alert(
-      `Reservation successful!\nName: ${name}\nEmail: ${email}\nDate: ${date}\nOccaison: ${occaison}\nTime: ${time}\nGuests: ${guests}`
-    );
-    // Clear the input fields
-    setName("");
-    setEmail("");
-    setDate("");
-    setOccaison("");
-    setTime("");
-    setGuests(1);
+    const formData = { name, email, date, occaison, time, guests };
+    console.log(formData);
+    submitForm(formData);
+  };
+
+  const handleDateChange = (e) => {
+    setDate(e.target.value);
+    dispatch({ type: "update", date: e.target.value });
   };
 
   return (
-    <div className="reservation-container">
-      <h2 className="reservation-header">Table Reservation</h2>
+    <div
+      className="reservation-container"
+      role="dialog"
+      aria-labelledby="reservation-header"
+    >
+      <h2 id="reservation-header" className="reservation-header">
+        Table Reservation
+      </h2>
       <form className="reservation-form" onSubmit={handleSubmit}>
-        <label>Name:</label>
+        <label htmlFor="name">Name:</label>
         <input
+          id="name"
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
+          aria-required="true"
         />
-        <label>Email:</label>
+        <label htmlFor="email">Email:</label>
         <input
+          id="email"
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
+          aria-required="true"
         />
-
         <div id="occasion-time">
-          <label> Date: </label>
+          <label htmlFor="date">Date:</label>
           <input
+            id="date"
             type="date"
             value={date}
-            onChange={(e) => setDate(e.target.value)}
+            onChange={handleDateChange}
             required
+            aria-required="true"
           />
-          <label> Occaison: </label>
+          <label htmlFor="occaison">Occasion:</label>
           <select
-            id="occasion"
+            id="occaison"
             value={occaison}
             onChange={(e) => setOccaison(e.target.value)}
             required
+            aria-required="true"
           >
-            <option>None</option>
-            <option>Birthday</option>
-            <option>Anniversary</option>
-            <option>Engagement</option>
+            <option value="">None</option>
+            <option value="Birthday">Birthday</option>
+            <option value="Anniversary">Anniversary</option>
+            <option value="Engagement">Engagement</option>
           </select>
-          <label> Time: </label>
+          <label htmlFor="time">Time:</label>
           <select
+            id="time"
             value={time}
             onChange={(e) => setTime(e.target.value)}
             required
+            aria-required="true"
           >
             <option value="">Select a time</option>
             {availableTimes.map((availableTime) => (
@@ -86,17 +97,23 @@ const Reservation = () => {
             ))}
           </select>
         </div>
-
-        <label>Number of Guests:</label>
+        <label htmlFor="guests">Number of Guests:</label>
         <input
+          id="guests"
           type="number"
           value={guests}
           onChange={(e) => setGuests(e.target.value)}
           min="1"
           required
+          aria-required="true"
         />
-        <button type="submit">Reserve</button>
+        <button type="submit" aria-label="Reserve">
+          Reserve
+        </button>
       </form>
+      <button aria-label="Close Reservation" onClick={onHideReservation}>
+        Close Reservation
+      </button>
     </div>
   );
 };

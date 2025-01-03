@@ -8,7 +8,7 @@ const Specials = () => {
   return (
     <section id="specials">
       <card>
-        <img class="sp" src={sp1} alt="SpecialDish1" />
+        <img className="sp" src={sp1} alt="SpecialDish1" />
         <h2>
           Greek salas <span>12.99$</span>
         </h2>
@@ -19,11 +19,11 @@ const Specials = () => {
         </p>
         <div>
           <h3>Order a delivery</h3>
-          <img class="icon" src={icon} alt="DeliveryIcon" />
+          <img className="icon" src={icon} alt="DeliveryIcon" />
         </div>
       </card>
       <card>
-        <img class="sp" src={sp2} alt="SpecialDish1" />
+        <img className="sp" src={sp2} alt="SpecialDish1" />
         <h2>
           Bruchetta <span>5.99$</span>
         </h2>
@@ -34,11 +34,11 @@ const Specials = () => {
         </p>
         <div>
           <h3>Order a delivery</h3>
-          <img class="icon" src={icon} alt="DeliveryIcon" />
+          <img className="icon" src={icon} alt="DeliveryIcon" />
         </div>
       </card>
       <card>
-        <img class="sp" src={sp3} alt="SpecialDish1" />
+        <img className="sp" src={sp3} alt="SpecialDish1" />
         <h2>
           Lemon Dessert <span>5.00$</span>
         </h2>
@@ -49,7 +49,7 @@ const Specials = () => {
         </p>
         <div>
           <h3>Order a delivery</h3>
-          <img class="icon" src={icon} alt="DeliveryIcon" />
+          <img className="icon" src={icon} alt="DeliveryIcon" />
         </div>
       </card>
     </section>
